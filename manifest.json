@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+
+  "name": "Snip n Share",
+  "description": "One Click away from Share, Copy and Search",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "images/icon-enabled.png",
+    "default_title": "Toggle Snip n Share."
+  },
+  "permissions": [
+      "tabs",
+      "activeTab",
+      "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": [ "slip-n-share.css" ],
+      "js": ["js/jquery.min.js","js/slip-n-share.js"]
+    }
+  ],
+  "icons": {
+    "128": "images/icon-enabled.png"
+  },
+  "web_accessible_resources": ["images/*.png"]
+}
