@@ -1,0 +1,27 @@
+#shareTool{
+	display: none;
+	background-color: #000000;
+    position: absolute;
+    box-sizing: content-box;
+    padding: 6px 6px 0px;
+    border-radius: 6px;
+    z-index: 100000001;
+}
+
+#toolUList{
+	list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#list_twitter{
+	padding: 0px 5px 0px 0px;
+    margin: 0px;
+    display: inline;
+}
+
+#inputId_twitter{
+	width: 24px;
+    height: 24px;
+}
+
