@@ -21,7 +21,10 @@
 }
 
 #inputId_twitter{
-	width: 24px;
-    height: 24px;
+	width: 24px !important;
+    height: 24px !important;
+    padding: none!important;
+    background: none!important;
+    border: none;
 }
 

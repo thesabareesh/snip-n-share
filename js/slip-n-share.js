@@ -88,10 +88,10 @@ document.addEventListener("mousedown", function(event) {
 }, true);
 document.addEventListener("mouseup", function(event) {
     if (event.button == 0) {
-        console.log("mouse up");
+        
         pageX = event.pageX+15;
        	pageY = event.pageY;
-       console.log("mouse up at "+pageX+" , "+pageY);
+       
          content=getSelectedContent();
         if(content!=""){
         	showShareTool();
@@ -100,3 +100,5 @@ document.addEventListener("mouseup", function(event) {
 
     }
 }, true);
+
+

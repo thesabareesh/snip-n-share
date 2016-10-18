@@ -3,3 +3,5 @@ To-do
 #1 Exclude share sites from URLs in manifest.
 #2 show twitter counter on toolbar
 #3 Add shortened url to the share context.
+#4 Add disable-extension  from tab feature
+#5 Switch from shareToolDiv to ContextMenu items.

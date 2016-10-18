@@ -11,7 +11,8 @@
   "permissions": [
       "tabs",
       "activeTab",
-      "<all_urls>"
+      "<all_urls>",
+      "contextMenus"
   ],
   "background": {
     "scripts": ["js/background.js"]
