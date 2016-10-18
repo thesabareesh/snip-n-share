@@ -26,9 +26,9 @@ function getSelectedContent(){
 	return encodeURIComponent(content.toString());
 }
 
-function popUp(url,title){
+function popUp(url,title,width,height){
 
-	return window.open(url, title);
+	return window.open(url, title,width='+width+', height='+height+');
 
 }
 
@@ -49,7 +49,7 @@ function addTwitter(){
 	$("#"+inputId_twitter).on("click", function() {
         var content = getSelectedContent();
         if (content != '') {
-				popUp("https://twitter.com/intent/tweet?text=" + decodeURI(content), "Share on twitter");
+				popUp("https://twitter.com/intent/tweet?text=" + decodeURI(content), "Share on twitter",200,100);
            
 		}
 
