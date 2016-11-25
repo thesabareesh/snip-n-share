@@ -19,6 +19,8 @@ var window_height="100";
 var twitterIcon = chrome.extension.getURL("images/twitter.png");
 var url_twitter="https://twitter.com/intent/tweet?text=";
 var title_window_twitter="Share on twitter";
+var url_gplus="https://plus.google.com/share?url=";
+var title_window_gplus="Share on Google +";
 var url_google="https://www.google.co.in/search?q=";
 var title_window_google="Google search";
 
@@ -79,13 +81,14 @@ function showShareTool(){
 
 function popUp(url,title,width,height){
   var win = window.open(url, title,width='+width+', height='+height+');
+
   if (!win) 
     alert('Please allow popups for this website');
 }
 
 
 //Listeners for left-mouse buttons
-document.addEventListener("mousedown", function(event) {
+/*document.addEventListener("mousedown", function(event) {
     if (event.button == 0) {
       
        if(isVisible){
@@ -98,10 +101,10 @@ document.addEventListener("mousedown", function(event) {
 }, true);
 document.addEventListener("mouseup", function(event) {
     if (event.button == 0) {
-        console.log("mouse up");
+       
         pageX = event.pageX+15;
         pageY = event.pageY;
-       console.log("mouse up at "+pageX+" , "+pageY);
+       
          content=getSelectedContent();
         if(content!=""){
           showShareTool();
@@ -109,7 +112,7 @@ document.addEventListener("mouseup", function(event) {
         }
 
     }
-}, true);
+}, true);*/
 
 
 function contextClick(info,tab){
@@ -119,8 +122,12 @@ function contextClick(info,tab){
         window.open(url_google+info.selectionText,'_blank');
         break;
     case "child_twitter":
-        popUp(url_twitter+info.selectionText,title_window_twitter,window_width,window_height);
+        popUp(url_twitter+info.selectionText+" - "+tab.url,title_window_twitter,window_width,window_height);
         break;
+    case "child_gplus":
+         popUp(url_gplus+tab.url,title_window_gplus,window_width,window_height);
+        break;
+
     default:
       break;
   }
